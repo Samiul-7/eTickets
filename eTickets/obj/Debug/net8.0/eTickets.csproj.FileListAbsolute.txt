@@ -1,0 +1,9 @@
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\rpswa.dswa.cache.json
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.GeneratedMSBuildEditorConfig.editorconfig
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.AssemblyInfoInputs.cache
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.AssemblyInfo.cs
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.csproj.CoreCompileInputs.cache
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.MvcApplicationPartsAssemblyInfo.cache
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.RazorAssemblyInfo.cache
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.RazorAssemblyInfo.cs
+F:\.net_Files\eTickets\eTickets\eTickets\obj\Debug\net8.0\eTickets.csproj.AssemblyReference.cache
