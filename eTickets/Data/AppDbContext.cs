@@ -13,6 +13,6 @@ namespace eTickets.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        
+        public DbSet<Cinema> Cinemas { get; set; }
     }
 }

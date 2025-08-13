@@ -2,96 +2,80 @@
     ViewData["Title"] = "List of Movies";
 }
 
-<div class="row">
-    <div class="col-md-4 col-xs-6 border-primary mb-3">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <div class="card-header text-white bg-info">
-                        <h5 class="card-title">The Matrix</h5>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" width="100%" alt="The Matrix">
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <p class="card-text">A computer hacker learns about the true nature of reality.</p>
-                        <p class="card-text"><b>Cinema:</b> Grand Cinema</p>
-                        <p class="card-text"><b>Category:</b> Action</p>
-                        <p class="card-text"><b>Start Date:</b> 01 Aug 25</p>
-                        <p class="card-text"><b>End Date:</b> 15 Aug 25</p>
-                        <p class="card-text"><b>Status:</b> <span class="badge bg-success text-white">AVAILABLE</span></p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card-footer">
-                        <a class="btn btn-outline-primary float-right"><i class="bi bi-eye-fill"></i> Show Details</a>
-                        <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Add to Cart (Price $9.99)</a>
-                    </div>
+<style>
+    .movie-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .movie-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+    .movie-poster {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .movie-header {
+        background: linear-gradient(45deg, #17a2b8, #138496);
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .badge-available {
+        background-color: #28a745;
+    }
+    .badge-upcoming {
+        background-color: #fd7e14;
+    }
+    .movie-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+</style>
+
+<div class="row g-4">
+    <!-- Movie Card Example -->
+    <div class="col-md-4 col-sm-6">
+        <div class="card movie-card">
+            <div class="movie-header">The Matrix</div>
+            <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" alt="The Matrix" class="movie-poster">
+            <div class="card-body">
+                <p class="card-text">A computer hacker learns about the true nature of reality.</p>
+                <p><b>Cinema Hall:</b> Grand Cinema</p>
+                <p><b>Category:</b> Action</p>
+                <p><b>Start Date:</b> 01 Aug 25</p>
+                <p><b>End Date:</b> 15 Aug 25</p>
+                <p><b>Status:</b> <span class="badge badge-available text-white">AVAILABLE</span></p>
+                <div class="movie-buttons mt-3">
+                    <a class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i> Details</a>
+                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> $9.99</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-4 col-xs-6 border-primary mb-3"></div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <div class="card-header text-white bg-info">
-                        <h5 class="card-title">The Matrix</h5>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" width="100%" alt="The Matrix">
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <p class="card-text">A computer hacker learns about the true nature of reality.</p>
-                        <p class="card-text"><b>Cinema:</b> Grand Cinema</p>
-                        <p class="card-text"><b>Category:</b> Action</p>
-                        <p class="card-text"><b>Start Date:</b> 01 Aug 25</p>
-                        <p class="card-text"><b>End Date:</b> 15 Aug 25</p>
-                        <p class="card-text"><b>Status:</b> <span class="badge bg-success text-white">AVAILABLE</span></p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card-footer">
-                        <a class="btn btn-outline-primary float-right"><i class="bi bi-eye-fill"></i> Show Details</a>
-                        <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Add to Cart (Price $9.99)</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Repeat for another movie -->
-    <div class="col-md-4 col-xs-6 border-primary mb-3">
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <div class="card-header text-white bg-info">
-                        <h5 class="card-title">Inception</h5>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" width="100%" alt="Inception">
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <p class="card-text">A thief who steals corporate secrets through dream-sharing technology.</p>
-                        <p class="card-text"><b>Cinema:</b> IMAX Theater</p>
-                        <p class="card-text"><b>Category:</b> Sci-Fi</p>
-                        <p class="card-text"><b>Start Date:</b> 03 Aug 25</p>
-                        <p class="card-text"><b>End Date:</b> 12 Aug 25</p>
-                        <p class="card-text"><b>Status:</b> <span class="badge bg-primary text-white">UPCOMING</span></p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card-footer">
-                        <a class="btn btn-outline-primary float-right"><i class="bi bi-eye-fill"></i> Show Details</a>
-                        <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Add to Cart (Price $12.50)</a>
-                    </div>
+    <!-- Another Movie -->
+    <div class="col-md-4 col-sm-6">
+        <div class="card movie-card">
+            <div class="movie-header">Inception</div>
+            <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" alt="Inception" class="movie-poster">
+            <div class="card-body">
+                <p class="card-text">A thief who steals corporate secrets through dream-sharing technology.</p>
+                <p><b>Cinema Hall:</b> IMAX Theater</p>
+                <p><b>Category:</b> Sci-Fi</p>
+                <p><b>Start Date:</b> 03 Aug 25</p>
+                <p><b>End Date:</b> 12 Aug 25</p>
+                <p><b>Status:</b> <span class="badge badge-upcoming text-white">UPCOMING</span></p>
+                <div class="movie-buttons mt-3">
+                    <a class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i> Details</a>
+                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> $12.50</a>
                 </div>
             </div>
         </div>
