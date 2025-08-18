@@ -22,7 +22,10 @@ namespace eTickets
             // DbContext configuration
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
-              services.AddScoped<ICinemasService, CinemasService>();
+
+                 services.AddScoped<IActorsService, ActorsService>();
+                 services.AddScoped<IProducersService, ProducersService>();
+                 services.AddScoped<ICinemasService, CinemasService>();
 
             // Authentication and authorization
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
