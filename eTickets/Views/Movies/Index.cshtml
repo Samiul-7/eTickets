@@ -1,83 +1,87 @@
-﻿@{
+﻿@model IEnumerable<Movie>
+
+@{
     ViewData["Title"] = "List of Movies";
 }
 
-<style>
-    .movie-card {
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Movies</h2>
+    
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        <a class="btn btn-primary" asp-controller="Movies" asp-action="Create">
+            <i class="bi bi-plus-circle"></i> Add Movie
+        </a>
     }
-    .movie-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    }
-    .movie-poster {
-        height: 250px;
-        object-fit: cover;
-        width: 100%;
-    }
-    .movie-header {
-        background: linear-gradient(45deg, #17a2b8, #138496);
-        color: white;
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .badge-available {
-        background-color: #28a745;
-    }
-    .badge-upcoming {
-        background-color: #fd7e14;
-    }
-    .movie-buttons {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-    }
-</style>
+</div>
 
 <div class="row g-4">
-    <!-- Movie Card Example -->
-    <div class="col-md-4 col-sm-6">
-        <div class="card movie-card">
-            <div class="movie-header">The Matrix</div>
-            <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" alt="The Matrix" class="movie-poster">
-            <div class="card-body">
-                <p class="card-text">A computer hacker learns about the true nature of reality.</p>
-                <p><b>Cinema Hall:</b> Grand Cinema</p>
-                <p><b>Category:</b> Action</p>
-                <p><b>Start Date:</b> 01 Aug 25</p>
-                <p><b>End Date:</b> 15 Aug 25</p>
-                <p><b>Status:</b> <span class="badge badge-available text-white">AVAILABLE</span></p>
-                <div class="movie-buttons mt-3">
-                    <a class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i> Details</a>
-                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> $9.99</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-sm-6">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <!-- Image -->
+                <img src="@item.ImageURL" class="card-img-top rounded-top-4" alt="@item.Name" style="height:220px; object-fit:cover;">
 
-    <!-- Another Movie -->
-    <div class="col-md-4 col-sm-6">
-        <div class="card movie-card">
-            <div class="movie-header">Inception</div>
-            <img src="https://www.shutterstock.com/image-vector/many-rainbow-gradient-random-bright-600w-2274412231.jpg" alt="Inception" class="movie-poster">
-            <div class="card-body">
-                <p class="card-text">A thief who steals corporate secrets through dream-sharing technology.</p>
-                <p><b>Cinema Hall:</b> IMAX Theater</p>
-                <p><b>Category:</b> Sci-Fi</p>
-                <p><b>Start Date:</b> 03 Aug 25</p>
-                <p><b>End Date:</b> 12 Aug 25</p>
-                <p><b>Status:</b> <span class="badge badge-upcoming text-white">UPCOMING</span></p>
-                <div class="movie-buttons mt-3">
-                    <a class="btn btn-outline-primary"><i class="bi bi-eye-fill"></i> Details</a>
-                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> $12.50</a>
+                <!-- Card Body -->
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">
+                        @item.Name
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                             <a class="float-end text-secondary" 
+                                asp-controller="Movies" 
+                                asp-action="Edit" 
+                                asp-route-id="@item.Id" 
+                                style="cursor:pointer;">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                        }
+                    </h5>
+
+                    <p class="card-text text-truncate" style="max-height:50px;">@item.MainDescription</p>
+                    @if (!string.IsNullOrEmpty(item.Charity))
+                    {
+                        <p class="card-text"><b>Charity: </b>@item.Charity</p>
+                    }
+                    <p class="card-text mb-1"><b>Cinema: </b>@item.Cinema.Name</p>
+                    <p class="card-text mb-1"><b>Category: </b>@item.MovieCategory</p>
+                    <p class="card-text mb-1"><b>Start Date: </b>@item.StartDate.ToString("dd MMM yy")</p>
+                    <p class="card-text mb-2"><b>End Date: </b>@item.EndDate.ToString("dd MMM yy")</p>
+
+                    <p class="card-text mt-auto">
+                        <b>Status: </b>
+                        @if (DateTime.Now >= item.StartDate && DateTime.Now <= item.EndDate)
+                        {
+                            <span class="badge bg-success text-white">AVAILABLE</span>
+                        }
+                        else if (DateTime.Now > item.EndDate)
+                        {
+                            <span class="badge bg-danger text-white">EXPIRED</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-primary text-white">UPCOMING</span>
+                        }
+                    </p>
                 </div>
+
+                <div class="card-footer bg-white border-top-0 d-flex gap-2">
+                    @if (!User.IsInRole("Admin"))
+                    {
+                        <button class="btn btn-success flex-fill rounded-pill" @(DateTime.Now > item.EndDate ? "disabled" : "")>
+                            Add to Cart $ @item.Price
+                        </button>
+                    }
+                    <a class="btn btn-outline-primary flex-fill rounded-pill" 
+                       asp-controller="Movies" 
+                       asp-action="Details" 
+                       asp-route-id="@item.Id">
+                        Show Details
+                    </a>
+                </div>
+
             </div>
         </div>
-    </div>
+    }
 </div>

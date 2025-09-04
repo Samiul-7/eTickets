@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
-    public class Movie:IEntityBase
+    public class Movie : IEntityBase
     {
         [Key]
         public int Id { get; set; }
@@ -20,9 +20,41 @@ namespace eTickets.Models
         public string ImageURL { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public MovieCategory MovieCategory { get; set; }
+
+        //Relationships
+        public List<Actor_Movie> Actors_Movies { get; set; }
+
         //Cinema
         public int CinemaId { get; set; }
+        [ForeignKey("CinemaId")]
+        public Cinema Cinema { get; set; }
+
         //Producer
         public int ProducerId { get; set; }
+        [ForeignKey("ProducerId")]
+        public Producer Producer { get; set; }
+        ///////////////////////////////////////////////////////////////////////
+        [NotMapped]
+        public string Charity
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Description)) return "";
+                var parts = Description.Split('@');
+                return parts.Length > 1 ? parts[1] : "";
+            }
+        }
+
+        [NotMapped]
+        public string MainDescription
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Description)) return "";
+                return Description.Split('@')[0];
+            }
+        }
+
     }
 }

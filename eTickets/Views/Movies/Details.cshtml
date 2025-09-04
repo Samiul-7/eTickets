@@ -1,0 +1,115 @@
+﻿@model Movie
+
+@{
+    ViewData["Title"] = "Movie details";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="card mb-12">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-header text-white bg-info">
+                        <h5 class="card-title mb-0">@Model.Name</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="@Model.ImageURL" width="100%" alt="@Model.Name">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p><b>Description: </b>@Model.MainDescription</p>
+
+                        @if (!string.IsNullOrEmpty(Model.Charity))
+                        {
+                            <p><b>Charity: </b>@Model.Charity</p>
+                        }
+
+                        <p><b>Cinema: </b>@Model.Cinema.Name</p>
+                        <p><b>Producer: </b>@Model.Producer.FullName</p>
+                        <p><b>Category: </b>@Model.MovieCategory</p>
+                        <p><b>Start Date: </b>@Model.StartDate.ToString("dd MMM yy")</p>
+                        <p><b>End Date: </b>@Model.EndDate.ToString("dd MMM yy")</p>
+                        <p>
+                            <b>Status: </b>
+                            @if (DateTime.Now >= Model.StartDate && DateTime.Now <= Model.EndDate)
+                            {
+                                <span class="badge bg-success text-white">AVAILABLE</span>
+                            }
+                            else if (DateTime.Now > Model.EndDate)
+                            {
+                                <span class="badge bg-danger text-white">EXPIRED</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-primary text-white">UPCOMING</span>
+                            }
+                        </p>
+
+                        <p><b>Actors: </b><hr />
+                            <div class="row">
+                                @foreach (var actor in Model.Actors_Movies)
+                                {
+                                    <div class="column text-center">
+                                        <img class="border-info rounded-circle" src="@actor.Actor.ProfilePictureURL" style="max-width: 150px" />
+                                        <br />
+                                        @actor.Actor.FullName
+                                    </div>
+                                }
+                            </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card-footer">
+                        <p class="card-text">
+                            <!-- Back button -->
+                            <a class="btn btn-outline-primary float-right" asp-action="Index">
+                                Back to List
+                            </a>
+
+                            <!-- Plain Buttons (no routing) -->
+                            @if (!User.IsInRole("Admin"))
+                            {
+                                <button class="btn btn-secondary text-white @((DateTime.Now > Model.EndDate) ? "disabled" : "")">
+                                    <i class="bi bi-wheelchair"></i> Wheelchair Seating
+                                </button>
+
+                                <button class="btn btn-success text-white @((DateTime.Now > Model.EndDate) ? "disabled" : "")">
+                                    <i class="bi bi-cart-plus"></i> Add to Cart $ @Model.Price
+                                </button>
+                            }
+
+                        </p>
+
+                        <hr />
+
+                        @if (!User.IsInRole("Admin"))
+                        {
+                            <h5>Half Price for Students</h5>
+                            @if (TempData["Error"] != null)
+                            {
+                                <div class="alert alert-danger">@TempData["Error"]</div>
+                            }
+
+                            <div class="mb-2">
+                                <label>Student ID:</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label>Institution Name:</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <button class="btn btn-warning text-white">
+                                <i class="bi bi-cart-plus"></i> Add to Cart (Half Price)
+                            </button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
