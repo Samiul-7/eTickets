@@ -9,149 +9,161 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = eTickets
 build_property.RootNamespace = eTickets
-build_property.ProjectDir = F:\.net_Files\eTickets_2\eTickets\
+build_property.ProjectDir = C:\Users\parba\OneDrive\Desktop\Turna@Files\SD_Lab_3.2\second_pull\eTickets\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\.net_Files\eTickets_2\eTickets
+build_property.MSBuildProjectDirectory = C:\Users\parba\OneDrive\Desktop\Turna@Files\SD_Lab_3.2\second_pull\eTickets
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Account/AccessDenied.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Account/Login.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Account/Register.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Account/RegisterCompleted.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Account/RegisterCompleted.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckNvbXBsZXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Account/Users.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Account/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Actors/Create.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Actors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0b3JzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Actors/Delete.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Actors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0b3JzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Actors/Details.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Actors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0b3JzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Actors/Edit.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Actors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0b3JzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Actors/Index.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Actors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0b3JzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Cinemas/Create.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Cinemas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZW1hc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Cinemas/Delete.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Cinemas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZW1hc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Cinemas/Details.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Cinemas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZW1hc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Cinemas/Edit.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Cinemas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZW1hc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Cinemas/Index.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Cinemas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZW1hc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Home/Index.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Home/Privacy.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Movies/Create.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Movies/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Movies/Details.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Movies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Movies/Edit.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Movies/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Movies/Index.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Movies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Producers/Create.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Orders/OrderCompleted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXE9yZGVyQ29tcGxldGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Orders/ShoppingCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXFNob3BwaW5nQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Producers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Producers/Delete.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Producers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Producers/Details.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Producers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Producers/Edit.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Producers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Producers/Index.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Producers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Shared/Components/ShoppingCartSummary/Default.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Shared/Components/ShoppingCartSummary/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2hvcHBpbmdDYXJ0U3VtbWFyeVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Shared/Error.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Shared/_CreateItem.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Shared/_CreateItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Shared/_Identity.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Shared/_Identity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JZGVudGl0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/_ViewImports.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/_ViewStart.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/.net_Files/eTickets_2/eTickets/Views/Shared/_Layout.cshtml]
+[C:/Users/parba/OneDrive/Desktop/Turna@Files/SD_Lab_3.2/second_pull/eTickets/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-oggoba35gg

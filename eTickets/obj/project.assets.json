@@ -2921,23 +2921,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bashar\\.nuget\\packages\\": {},
+    "C:\\Users\\parba\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\.net_Files\\eTickets_2\\eTickets\\eTickets.csproj",
+      "projectUniqueName": "C:\\Users\\parba\\OneDrive\\Desktop\\Turna@Files\\SD_Lab_3.2\\second_pull\\eTickets\\eTickets.csproj",
       "projectName": "eTickets",
-      "projectPath": "F:\\.net_Files\\eTickets_2\\eTickets\\eTickets.csproj",
-      "packagesPath": "C:\\Users\\Bashar\\.nuget\\packages\\",
-      "outputPath": "F:\\.net_Files\\eTickets_2\\eTickets\\obj\\",
+      "projectPath": "C:\\Users\\parba\\OneDrive\\Desktop\\Turna@Files\\SD_Lab_3.2\\second_pull\\eTickets\\eTickets.csproj",
+      "packagesPath": "C:\\Users\\parba\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\parba\\OneDrive\\Desktop\\Turna@Files\\SD_Lab_3.2\\second_pull\\eTickets\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bashar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\parba\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
