@@ -91,7 +91,7 @@
 
                         <hr />
 
-                        @if (!User.IsInRole("Admin"))
+                       @if (!User.IsInRole("Admin"))
                         {
                             <h5>Half Price for Students</h5>
                             @if (TempData["Error"] != null)
@@ -99,17 +99,20 @@
                                 <div class="alert alert-danger">@TempData["Error"]</div>
                             }
 
-                            <div class="mb-2">
-                                <label>Student ID:</label>
-                                <input type="text" class="form-control" />
-                            </div>
-                            <div class="mb-2">
-                                <label>Institution Name:</label>
-                                <input type="text" class="form-control" />
-                            </div>
-                            <button class="btn btn-warning text-white">
-                                <i class="bi bi-cart-plus"></i> Add to Cart (Half Price)
-                            </button>
+                            <form asp-controller="Orders" asp-action="AddItemToShoppingCartHalfPrice" method="post">
+                                <input type="hidden" name="id" value="@Model.Id" />
+                                <div class="mb-2">
+                                    <label for="studentId">Student ID:</label>
+                                    <input type="text" name="studentId" id="studentId" class="form-control" required />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="institutionName">Institution Name:</label>
+                                    <input type="text" name="institutionName" id="institutionName" class="form-control" required />
+                                </div>
+                                <button type="submit" class="btn btn-warning text-white">
+                                    <i class="bi bi-cart-plus"></i> Add to Cart (Half Price)
+                                </button>
+                            </form>
                         }
                     </div>
                 </div>

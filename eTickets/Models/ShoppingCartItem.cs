@@ -16,5 +16,6 @@ namespace eTickets.Models
 
 
         public string ShoppingCartId { get; set; }
+        public bool IsHalfPrice { get; set; } = false;
     }
 }

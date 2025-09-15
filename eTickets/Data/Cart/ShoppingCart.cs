@@ -32,26 +32,36 @@ namespace eTickets.Data.Cart
             return new ShoppingCart(context) { ShoppingCartId = cartId };
         }
 
-        public void AddItemToCart(Movie movie)
+        public void AddItemToCart(Movie movie, bool isHalfPrice = false)
         {
-            var shoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(n => n.Movie.Id == movie.Id && n.ShoppingCartId == ShoppingCartId);
+            var shoppingCartItem = _context.ShoppingCartItems.FirstOrDefault(
+                n => n.Movie.Id == movie.Id && n.ShoppingCartId == ShoppingCartId
+            );
 
-            if(shoppingCartItem == null)
+            if (shoppingCartItem == null)
             {
                 shoppingCartItem = new ShoppingCartItem()
                 {
                     ShoppingCartId = ShoppingCartId,
                     Movie = movie,
-                    Amount = 1
+                    Amount = 1,
+                    IsHalfPrice = isHalfPrice
                 };
 
                 _context.ShoppingCartItems.Add(shoppingCartItem);
-            } else
+            }
+            else
             {
                 shoppingCartItem.Amount++;
+                if (isHalfPrice)
+                {
+                    shoppingCartItem.IsHalfPrice = true;
+                }
             }
+
             _context.SaveChanges();
         }
+
 
         public void RemoveItemFromCart(Movie movie)
         {
@@ -75,7 +85,13 @@ namespace eTickets.Data.Cart
             return ShoppingCartItems ?? (ShoppingCartItems = _context.ShoppingCartItems.Where(n => n.ShoppingCartId == ShoppingCartId).Include(n => n.Movie).ToList());
         }
 
-        public double GetShoppingCartTotal() =>  _context.ShoppingCartItems.Where(n => n.ShoppingCartId == ShoppingCartId).Select(n => n.Movie.Price * n.Amount).Sum();
+      public double GetShoppingCartTotal() =>
+    _context.ShoppingCartItems
+        .Where(n => n.ShoppingCartId == ShoppingCartId)
+        .Select(n => n.IsHalfPrice ? n.Movie.Price / 2 * n.Amount : n.Movie.Price * n.Amount)
+        .Sum();
+
+
 
         public async Task ClearShoppingCartAsync()
         {

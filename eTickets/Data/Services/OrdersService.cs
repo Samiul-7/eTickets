@@ -1,6 +1,5 @@
 ﻿using eTickets.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +9,7 @@ namespace eTickets.Data.Services
     public class OrdersService : IOrdersService
     {
         private readonly AppDbContext _context;
+
         public OrdersService(AppDbContext context)
         {
             _context = context;
@@ -17,9 +17,13 @@ namespace eTickets.Data.Services
 
         public async Task<List<Order>> GetOrdersByUserIdAndRoleAsync(string userId, string userRole)
         {
-            var orders = await _context.Orders.Include(n => n.OrderItems).ThenInclude(n => n.Movie).Include(n => n.User).ToListAsync();
+            var orders = await _context.Orders
+                .Include(n => n.OrderItems)
+                    .ThenInclude(n => n.Movie)
+                .Include(n => n.User)
+                .ToListAsync();
 
-            if(userRole != "Admin")
+            if (userRole != "Admin")
             {
                 orders = orders.Where(n => n.UserId == userId).ToList();
             }
@@ -34,6 +38,7 @@ namespace eTickets.Data.Services
                 UserId = userId,
                 Email = userEmailAddress
             };
+
             await _context.Orders.AddAsync(order);
             await _context.SaveChangesAsync();
 
@@ -44,10 +49,13 @@ namespace eTickets.Data.Services
                     Amount = item.Amount,
                     MovieId = item.Movie.Id,
                     OrderId = order.Id,
-                    Price = item.Movie.Price
+                    // Apply half-price if IsHalfPrice is true
+                    Price = item.IsHalfPrice ? item.Movie.Price / 2 : item.Movie.Price
                 };
+
                 await _context.OrderItems.AddAsync(orderItem);
             }
+
             await _context.SaveChangesAsync();
         }
     }

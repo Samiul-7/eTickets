@@ -57,9 +57,13 @@
 
         <div class="text-right">
             <div class="btn-group">
-                <a class="btn btn-outline-primary" asp-controller="Orders" asp-action="CompleteOrder">
-                    Place Order
-                </a>
+                @if (Model.ShoppingCart.ShoppingCartItems.Any())
+                {
+                    <a class="btn btn-outline-primary" asp-controller="Orders" asp-action="CompleteOrder">
+                        Place Order
+                    </a>
+                    <span style="padding:5px"></span>
+                }
                 <span style="padding:5px"></span>
                 <a class="btn btn-outline-success" asp-controller="Movies" asp-action="Index">
                     Add more items

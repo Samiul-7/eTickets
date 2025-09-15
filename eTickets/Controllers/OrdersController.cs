@@ -4,9 +4,6 @@ using eTickets.Data.Static;
 using eTickets.Data.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -48,12 +45,14 @@ namespace eTickets.Controllers
 
             return View(response);
         }
+        ///////////////////////////////////////////////////////////////////////////////////////// 
         public IActionResult SelectWheelChairSeats(int id)
         {
             // You can pass the movie ID so we know which movie it's for
             ViewBag.MovieId = id;
             return View();
         }
+        ///////////////////////////////////////////////////////////////////////////////////////////
 
         public async Task<IActionResult> AddItemToShoppingCart(int id)
         {
@@ -65,6 +64,21 @@ namespace eTickets.Controllers
             }
             return RedirectToAction(nameof(ShoppingCart));
         }
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+         public async Task<IActionResult> AddItemToShoppingCartHalfPrice(int id, string studentId, string institutionName)
+        {
+            var item = await _moviesService.GetMovieByIdAsync(id);
+            if (item != null)
+            {
+                _shoppingCart.AddItemToCart(item, isHalfPrice: true);
+            }
+            return RedirectToAction(nameof(ShoppingCart));
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////
 
         public async Task<IActionResult> RemoveItemFromShoppingCart(int id)
         {
