@@ -1,0 +1,99 @@
+@{
+    ViewData["Title"] = "Wheelchair Seat Selection";
+    var movieId = ViewBag.MovieId;
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3">Select Wheelchair-Friendly Seats</h3>
+    <p class="text-muted">Do you have a wheelchaired person? Choose seats below:</p>
+
+    <form asp-controller="Orders" asp-action="AddItemToShoppingCart" method="post">
+        <input type="hidden" name="id" value="@movieId" />
+
+        <div class="seat-layout mb-4">
+            <!-- Row A -->
+            <div class="d-flex justify-content-center mb-2">
+                @for (int i = 1; i <= 6; i++)
+                {
+                    <label class="seat">
+                        <input type="checkbox" name="seats" value="A@i" />
+                        <span>A@i</span>
+                    </label>
+                }
+            </div>
+
+            <!-- Row B -->
+            <div class="d-flex justify-content-center mb-2">
+                @for (int i = 1; i <= 6; i++)
+                {
+                    <label class="seat">
+                        <input type="checkbox" name="seats" value="B@i" />
+                        <span>B@i</span>
+                    </label>
+                }
+            </div>
+
+            <!-- Row C -->
+            <div class="d-flex justify-content-center mb-2">
+                @for (int i = 1; i <= 6; i++)
+                {
+                    <label class="seat">
+                        <input type="checkbox" name="seats" value="C@i" />
+                        <span>C@i</span>
+                    </label>
+                }
+            </div>
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-cart-plus"></i> Add to Cart (Wheelchair Option)
+            </button>
+            <a asp-action="Details" asp-controller="Movies" asp-route-id="@movieId" class="btn btn-outline-secondary">
+                Cancel
+            </a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .seat-layout {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .seat {
+        position: relative;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .seat input {
+        display: none;
+    }
+
+    .seat span {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 8px;
+        background-color: #e0e0e0;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .seat input:checked + span {
+        background-color: #28a745;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .seat span:hover {
+        background-color: #d6d6d6;
+    }
+</style>

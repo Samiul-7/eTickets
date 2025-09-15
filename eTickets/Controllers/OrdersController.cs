@@ -48,6 +48,12 @@ namespace eTickets.Controllers
 
             return View(response);
         }
+        public IActionResult SelectWheelChairSeats(int id)
+        {
+            // You can pass the movie ID so we know which movie it's for
+            ViewBag.MovieId = id;
+            return View();
+        }
 
         public async Task<IActionResult> AddItemToShoppingCart(int id)
         {
