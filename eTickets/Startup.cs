@@ -1,8 +1,10 @@
 using eTickets.Data;
+using eTickets.Data.Services;
 using eTickets.Data.Static;
 using eTickets.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using eTickets.Data.Cart;
 
 namespace eTickets
 {
@@ -19,12 +21,20 @@ namespace eTickets
         public void ConfigureServices(IServiceCollection services)
         {
             // DbContext configuration
-            services.AddDbContext<AppDbContext>(options => 
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
 
+                 services.AddScoped<IActorsService, ActorsService>();
+                 services.AddScoped<IProducersService, ProducersService>();
+                 services.AddScoped<ICinemasService, CinemasService>();
+                 services.AddScoped<IMoviesService, MoviesService>();
+                 services.AddScoped<IOrdersService, OrdersService>();
+
+                services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+                services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
 
             // Authentication and authorization
-            services.AddIdentity<ApplicationUser, IdentityRole>(options => 
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequireDigit = false;
@@ -40,6 +50,7 @@ namespace eTickets
             services.AddSession();
 
             services.AddControllersWithViews();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
